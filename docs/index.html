@@ -1,19 +1,29 @@
----
-title: Maintenir un code lisible
-theme: theme-reveal/makina.css
-verticalSeparator: <!--v-->
-revealOptions:
-    transition: 'slide'
----
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Maintenir un code lisible</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./_assets/theme-reveal/makina.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+          <link rel="stylesheet" href="./_assets/theme-reveal/makina.css">
+
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template">
 
 <!-- .slide: class="title logo" data-background="#b5b42c" -->
 
 # Maintenir un code lisible
 
 ### Sébastien Corbin
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="programme bg-lion-left" -->
 
 # Préparez-vous
@@ -27,12 +37,8 @@ Attention, danger, risque de :
 
 Les premiers rangs risquent d'être arrosés par les derniers
 
-Note:
-
-Avant de savoir qu'est ce qu'un code lisible il faut se rappeler ce qu'est un code illisible
-
----
-
+<aside class="notes"><p>Avant de savoir qu&#39;est ce qu&#39;un code lisible il faut se rappeler ce qu&#39;est un code illisible</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="title" -->
 
 ## Imaginez... un monde sans code style
@@ -56,11 +62,8 @@ function zoubida(lavabo)
 }}
 ```
 
-Note:
-Bon alors là j'ai pris un language bizarre qui permet de faire du caca
-
----
-
+<aside class="notes"><p>Bon alors là j&#39;ai pris un language bizarre qui permet de faire du caca</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 Connaissez-vous l'indentation inversée ?
 
 ```
@@ -81,9 +84,7 @@ myFunc();
 Oui oui, ça existe 
 https://stackoverflow.com/q/218123
 https://softwareengineering.stackexchange.com/q/1338
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Et avec python ?
 
 * Syntaxe claire
@@ -104,18 +105,13 @@ bar = 3; print(bar)
 
 **Défi :** créez/trouvez un obduscateur en Python !
 
-Note:
-Les parenthèses peuvent être illimitées, les points virgules acceptés,
-mais beaucoup de concepts sont fermés (exemple des lambda)
-
----
-
+<aside class="notes"><p>Les parenthèses peuvent être illimitées, les points virgules acceptés,
+mais beaucoup de concepts sont fermés (exemple des lambda)</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="title bg-python" -->
 
 # Une chance de coder sous Python
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Tableau récapitulatif des *coding standards*
 
 | Langage |	Statut| 	Nom |	Commentaires|
@@ -129,9 +125,7 @@ mais beaucoup de concepts sont fermés (exemple des lambda)
 |Rust|	Officiel|	rustfmt|	|
 |C#	|Officiel		|||
 |Python|	Officiel|	PEP8	||
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Introduction à la PEP8
 
 - indentation de 4 espaces
@@ -142,25 +136,25 @@ mais beaucoup de concepts sont fermés (exemple des lambda)
 - CamelCase pour classes
 
 Ensuite chaque framework/bibliothèque/projet a son propre coding standard.
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="title" data-background="#b5b42c" -->
 
 # Un outil de prédilection :
 # le *linter*
 
-Note:
-
-* Logical Lint
-    * Code errors
-    * Code with potentially unintended results
-    * Dangerous code patterns
-* Stylistic Lint
-    * Code not conforming to defined conventions
-
----
-
+<aside class="notes"><ul>
+<li>Logical Lint<ul>
+<li>Code errors</li>
+<li>Code with potentially unintended results</li>
+<li>Dangerous code patterns</li>
+</ul>
+</li>
+<li>Stylistic Lint<ul>
+<li>Code not conforming to defined conventions</li>
+</ul>
+</li>
+</ul>
+</aside></script></section><section  data-markdown><script type="text/template">
 Les **outils de base** pour vérifier la compatibilité PEP8 :
 
 * **pylint** : vérificateur d'erreurs de syntaxe
@@ -176,41 +170,28 @@ Les **outils de base** pour vérifier la compatibilité PEP8 :
 
 http://meta.pycqa.org
 
-Note:
-
-On pourrait penser que tous ces linters se tirent la bourre
+<aside class="notes"><p>On pourrait penser que tous ces linters se tirent la bourre
 mais ils sont regroupés sous un même groupe de travail
-nommé PyCQA (pour Python Code Quality Authority)
-
----
-
+nommé PyCQA (pour Python Code Quality Authority)</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="title" data-background="#b5b42c url(theme-reveal/images/bg-lenin.jpg) no-repeat -60% bottom" -->
 
 # Aller plus loin
 
-Note: 
-
-Malgré une PEP8 relativement complète, elle reste laxe sur certains point
-il reste donc des petites interrogations que tout le monde se pose
-
----
-
+<aside class="notes"><p>Malgré une PEP8 relativement complète, elle reste laxe sur certains point
+il reste donc des petites interrogations que tout le monde se pose</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 ## Nombre de caractères d'une ligne (en vrai)
 
 Certains sont nazis avec 70 caractères, d'autres plus laxes 88 caractères car on est plus sur écran DOS.
 
 Sur les docstring, c'est parfois 72, parfois plus...
 
-Note:
-
-Limite héritée des écrans touts petits, toujours en vigeur 
+<aside class="notes"><p>Limite héritée des écrans touts petits, toujours en vigeur 
 car il est plus facile de scanner un code sur une courte colonne 
-qu’en faisant des aller-retours constant
-
-Imaginez un journal ecrit sans colonnes
-
----
-
+qu’en faisant des aller-retours constant</p>
+<p>Imaginez un journal ecrit sans colonnes</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 ## Wrapping (retour à la ligne)
 
 Des arguments/paramètres
@@ -235,13 +216,9 @@ my_super_long_method_name(
 )
 ```
 
-Note:
-
-Plusieurs écoles, choisissez la votre, mais avec la dernière vous pouvez 
-vous retrouvez avec des fichiers énormes en terme de lignes
-
----
-
+<aside class="notes"><p>Plusieurs écoles, choisissez la votre, mais avec la dernière vous pouvez 
+vous retrouvez avec des fichiers énormes en terme de lignes</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 D'une callchain
 
 ```python
@@ -270,11 +247,8 @@ result = (
 )
 ```
 
-Note:
-Surtout, restez consistents
-
----
-
+<aside class="notes"><p>Surtout, restez consistents</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 Des imports
 
 ```python
@@ -304,9 +278,7 @@ from mon_package import (
 )
 ```
 et ça continue avec les listes, les dictionnaires, etc...
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Virgules en fin de ligne
 
 ```python
@@ -335,13 +307,9 @@ Double ou simple quote ? Forcé ou non ?
 "Bonjour {0}, bienvenue chez {1}".format('Kévin', 'McDonald')
 ```
 
-Note:
-bon là en l'occurence il n'est censé rien y avoir puisque c'est `kwargs`
-
-Pour le formattage, certains n'accepte plus l'ancienne notation et d'autre force le nommage des placeholders
-
----
-
+<aside class="notes"><p>bon là en l&#39;occurence il n&#39;est censé rien y avoir puisque c&#39;est <code>kwargs</code></p>
+<p>Pour le formattage, certains n&#39;accepte plus l&#39;ancienne notation et d&#39;autre force le nommage des placeholders</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 ## Complexité cyclomatique
 
 ```python
@@ -367,12 +335,9 @@ Indice allant de 0 à 100 avec :
 
 ## Nombre de ligne de code par module
 
-Note:
-vérifier que tout connait le principe de complexité cyclomatique
-Ce sont des métrique poussées et parfois peu représentatrices
-
----
-
+<aside class="notes"><p>vérifier que tout connait le principe de complexité cyclomatique
+Ce sont des métrique poussées et parfois peu représentatrices</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 Encore des outils :
 
 * **radon**/**xenon** : métriques de Halstead
@@ -382,14 +347,11 @@ Encore des outils :
 * **flake8** : combinaison de `PyFlakes`, `pycodestyle` et `mccabe`
 * **black** : formatteur nazi
 
-Note:
-S'arrêter sur isort
+<aside class="notes"><p>S&#39;arrêter sur isort
 Préciser que pylama et flake8 se repose sur les épaule de géants
 Pylama un peu plus complexe à configurer
-Black est récent, très rapide, peu d'options donc on le lance et on oublie
-
----
-
+Black est récent, très rapide, peu d&#39;options donc on le lance et on oublie</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 ## Tox
 
 Sert à automatiser les tests, pratique car son fichier de config `tox.ini` est lu par *flake8* et *isort* notamment
@@ -429,9 +391,7 @@ known_django = django
 known_first_party = accounts, common, messaging
 sections = FUTURE,STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,LOCALFOLDER
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Et le bon vieux **grep** ?!?
 
 ```python
@@ -455,17 +415,12 @@ c'est à la fin du talk.
 >>>>>>> branch-a
 ```
 
-Note:
-Que celui ou celle qui n'a jamais oublié un pdb en prod crie kamoulox maintenant
-
----
-
+<aside class="notes"><p>Que celui ou celle qui n&#39;a jamais oublié un pdb en prod crie kamoulox maintenant</p>
+</aside></script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="title bg-rocks"-->
 
 # A quel moment vérifier ?
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Pendant l'écriture
 
 Configurer son IDE : 
@@ -476,9 +431,7 @@ Configurer son IDE :
     * <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>L</kbd> sous Max OS
 
 * Lancer le linter régulièrement en ligne de commande
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Avant de commiter
 
 * Hook Git de pre-commit hook maison
@@ -499,9 +452,7 @@ fi
 ```
 
 Un exemple en python https://gist.github.com/streeter/1376856
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Avant de commiter
 
 Fichier de configuration partagé avec [pre-commit](https://pre-commit.com/)
@@ -528,9 +479,7 @@ Fichier de configuration partagé avec [pre-commit](https://pre-commit.com/)
 * `pre-commit install`
 
 Possibilité d'ajouter ses propres hooks, tout ça, en python
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 ## Avec une Continuous Integration
 
 * Travis CI
@@ -560,12 +509,64 @@ tests:
     - flake8 .
     - isort -e --check-only
 ```
-
----
-
+</script></section><section  data-markdown><script type="text/template">
 <!-- .slide: class="title alternate" -->
 
 # Des questions ?
 
 https://makinacorpus.github.io/maintenir-code-lisible/
 
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {"transition":"slide"};
+            options = extend(defaultOptions, options, queryOptions);
+        </script>
+
+
+        <script>
+          Reveal.initialize(options);
+        </script>
+    </body>
+</html>
