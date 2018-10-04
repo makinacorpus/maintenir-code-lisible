@@ -116,15 +116,15 @@ mais beaucoup de concepts sont fermés (exemple des lambda)</p>
 
 | Langage |	Statut| 	Nom |	Commentaires|
 |---------|--------|-------|------------|
-| PHP|Officiel |PHP-FIG / PSR |Récent, d'autres standards sont apparus avant|
-|Javascript|	Communautaire	|ESLint	|C'est le bordel, mais eslint est le plus utilisé|
-|Typescript|	Communautaire|		Google a pondu gts||
+| PHP|[Officiel](https://www.php-fig.org/psr/psr-2/) |PHP-FIG / PSR |Récent, d'autres standards sont apparus avant|
+|Javascript|	Communautaire	|[ESLint](https://eslint.org/docs/developer-guide/code-conventions)	|C'est le bordel, mais eslint est le plus utilisé|
+|Typescript|	Communautaire|		Google a pondu [gts](https://github.com/google/ts-style)||
 |Ruby|	Communautaire		|||
-|Java|	Communautaire	|	||
+|Java|	[Officiel](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)	| ||
 |Go|	Officiel|	gofmt|	Voir Effective Go|
 |Rust|	Officiel|	rustfmt|	|
-|C#	|Officiel		|||
-|Python|	Officiel|	PEP8	||
+|C#	|[Officiel]()		|||
+|Python|	Officiel|	[PEP8](https://www.python.org/dev/peps/pep-0008/)	||
 </script></section><section  data-markdown><script type="text/template">
 ## Introduction à la PEP8
 
@@ -295,7 +295,7 @@ Doit-on la retirer pour éviter de dépasser les 79 caractères ?
 Double ou simple quote ? Forcé ou non ?
 
 
-## Formattage de chaînes
+## Formatage de chaînes
 
 ```python
 "Bonjour %s, bienvenue chez %s" % ("la vie", "les bisounours")
@@ -308,7 +308,7 @@ Double ou simple quote ? Forcé ou non ?
 ```
 
 <aside class="notes"><p>bon là en l&#39;occurence il n&#39;est censé rien y avoir puisque c&#39;est <code>kwargs</code></p>
-<p>Pour le formattage, certains n&#39;accepte plus l&#39;ancienne notation et d&#39;autre force le nommage des placeholders</p>
+<p>Pour le formatage, certains n&#39;accepte plus l&#39;ancienne notation et d&#39;autre force le nommage des placeholders</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Complexité cyclomatique
 
@@ -316,13 +316,13 @@ Double ou simple quote ? Forcé ou non ?
 for i in ma_liste:
     if i < 10:
         try:
-            while true:
+            while True:
                 answer = ask("why ???")
-                if answer = "idontknow"
-                    raise DontKnowEception
-            except DontKnowEceptiona as e:
-                for i in range(3):
-                    print("ha")
+                if answer == "idontknow":
+                    raise DontKnowException
+        except DontKnowException as e:
+            for i in range(3):
+                print("ha")
 ```
 
 ## Maintenabilité

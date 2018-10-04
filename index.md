@@ -323,7 +323,7 @@ Doit-on la retirer pour éviter de dépasser les 79 caractères ?
 Double ou simple quote ? Forcé ou non ?
 
 
-## Formattage de chaînes
+## Formatage de chaînes
 
 ```python
 "Bonjour %s, bienvenue chez %s" % ("la vie", "les bisounours")
@@ -338,7 +338,7 @@ Double ou simple quote ? Forcé ou non ?
 Note:
 bon là en l'occurence il n'est censé rien y avoir puisque c'est `kwargs`
 
-Pour le formattage, certains n'accepte plus l'ancienne notation et d'autre force le nommage des placeholders
+Pour le formatage, certains n'accepte plus l'ancienne notation et d'autre force le nommage des placeholders
 
 ---
 
