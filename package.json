@@ -1,0 +1,23 @@
+{
+  "name": "maintenir-code-lisible",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "reveal-md index.md -w",
+    "build:pdf": "reveal-md index.md --print maintenir-code-lisible.pdf",
+    "build:html": "reveal-md index.md --static docs --static-dirs images --css theme-reveal/makina.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.makina-corpus.net:sco/maintenir-code-lisible.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "phantomjs-prebuilt": "^2.1.7",
+    "reveal-md": "^2.1.2"
+  }
+}
