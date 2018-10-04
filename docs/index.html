@@ -350,7 +350,8 @@ Encore des outils :
 <aside class="notes"><p>S&#39;arrêter sur isort
 Préciser que pylama et flake8 se repose sur les épaule de géants
 Pylama un peu plus complexe à configurer
-Black est récent, très rapide, peu d&#39;options donc on le lance et on oublie</p>
+Black est récent, très rapide, peu d&#39;options donc on le lance et on oublie, 
+très utile dans les grosses équipe car peu de config possible</p>
 </aside></script></section><section  data-markdown><script type="text/template">
 ## Tox
 
@@ -425,7 +426,7 @@ c'est à la fin du talk.
 
 Configurer son IDE : 
     
-* Pycharm autoformatte où peut lancer un formatteur avec un raccourci
+* Pycharm autoformatte ou peut lancer un formatteur avec un raccourci
 
     * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>L</kbd> sous Linux/Windows
     * <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>L</kbd> sous Max OS
@@ -434,7 +435,7 @@ Configurer son IDE :
 </script></section><section  data-markdown><script type="text/template">
 ## Avant de commiter
 
-* Hook Git de pre-commit hook maison
+* Hook git de pre-commit maison
 
 ```bash
 # à mettre dans votre-projet/.git/hooks/pre-commit et à rendre executable
@@ -500,7 +501,7 @@ script:
 * GitlabCI
 
 ```yaml
-image: python
+image: python:3.6
 
 before_script:
   - pip install -r dev-requirements.txt

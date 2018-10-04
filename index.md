@@ -120,15 +120,15 @@ mais beaucoup de concepts sont fermés (exemple des lambda)
 
 | Langage |	Statut| 	Nom |	Commentaires|
 |---------|--------|-------|------------|
-| PHP|Officiel |PHP-FIG / PSR |Récent, d'autres standards sont apparus avant|
-|Javascript|	Communautaire	|ESLint	|C'est le bordel, mais eslint est le plus utilisé|
-|Typescript|	Communautaire|		Google a pondu gts||
+| PHP|[Officiel](https://www.php-fig.org/psr/psr-2/) |PHP-FIG / PSR |Récent, d'autres standards sont apparus avant|
+|Javascript|	Communautaire	|[ESLint](https://eslint.org/docs/developer-guide/code-conventions)	|C'est le bordel, mais eslint est le plus utilisé|
+|Typescript|	Communautaire|		Google a pondu [gts](https://github.com/google/ts-style)||
 |Ruby|	Communautaire		|||
-|Java|	Communautaire	|	||
+|Java|	[Officiel](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)	| ||
 |Go|	Officiel|	gofmt|	Voir Effective Go|
 |Rust|	Officiel|	rustfmt|	|
-|C#	|Officiel		|||
-|Python|	Officiel|	PEP8	||
+|C#	|[Officiel]()		|||
+|Python|	Officiel|	[PEP8](https://www.python.org/dev/peps/pep-0008/)	||
 
 ---
 
@@ -348,13 +348,13 @@ Pour le formattage, certains n'accepte plus l'ancienne notation et d'autre force
 for i in ma_liste:
     if i < 10:
         try:
-            while true:
+            while True:
                 answer = ask("why ???")
-                if answer = "idontknow"
-                    raise DontKnowEception
-            except DontKnowEceptiona as e:
-                for i in range(3):
-                    print("ha")
+                if answer == "idontknow":
+                    raise DontKnowException
+        except DontKnowException as e:
+            for i in range(3):
+                print("ha")
 ```
 
 ## Maintenabilité
@@ -386,7 +386,8 @@ Note:
 S'arrêter sur isort
 Préciser que pylama et flake8 se repose sur les épaule de géants
 Pylama un peu plus complexe à configurer
-Black est récent, très rapide, peu d'options donc on le lance et on oublie
+Black est récent, très rapide, peu d'options donc on le lance et on oublie, 
+très utile dans les grosses équipe car peu de config possible
 
 ---
 
@@ -470,7 +471,7 @@ Que celui ou celle qui n'a jamais oublié un pdb en prod crie kamoulox maintenan
 
 Configurer son IDE : 
     
-* Pycharm autoformatte où peut lancer un formatteur avec un raccourci
+* Pycharm autoformatte ou peut lancer un formatteur avec un raccourci
 
     * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>L</kbd> sous Linux/Windows
     * <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>L</kbd> sous Max OS
@@ -481,7 +482,7 @@ Configurer son IDE :
 
 ## Avant de commiter
 
-* Hook Git de pre-commit hook maison
+* Hook git de pre-commit maison
 
 ```bash
 # à mettre dans votre-projet/.git/hooks/pre-commit et à rendre executable
@@ -551,7 +552,7 @@ script:
 * GitlabCI
 
 ```yaml
-image: python
+image: python:3.6
 
 before_script:
   - pip install -r dev-requirements.txt
